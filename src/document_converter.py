@@ -300,7 +300,8 @@ class DocumentConverter(ConverterBase):
         # Add options for preserving formatting if specified
         if kwargs.get('preserve_formatting', True):
             if pandoc_output_format == 'markdown':
-                extra_args.extend(['--wrap=none', '--atx-headers'])
+                # Modified: Removed the --atx-headers option that was causing the error
+                extra_args.extend(['--wrap=none'])
             elif pandoc_output_format == 'docx':
                 extra_args.extend(['--reference-doc=' + kwargs.get('style_template')]) if kwargs.get('style_template') else None
         

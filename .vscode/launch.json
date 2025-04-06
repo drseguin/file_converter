@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
     {
-    "name": "Streamlit Debugger Dave",
+    "name": "Main App",
     "type": "debugpy",
     "request": "launch",
     "program": "/Users/davidseguin/git/file_converter/.venv/lib/python3.11/site-packages/streamlit",
@@ -10,6 +10,27 @@
         "cwd": "/Users/davidseguin/git/file_converter",
         "args": ["run", "/Users/davidseguin/git/file_converter/main.py"],
         "python": "/Users/davidseguin/git/file_converter/.venv/bin/python"
-    }
-    ]
+    },
+    {
+        "name": "app.py",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "/Users/davidseguin/git/file_converter/.venv/lib/python3.11/site-packages/streamlit",
+        "console": "integratedTerminal",
+            "cwd": "/Users/davidseguin/git/file_converter",
+            "args": ["run", "/Users/davidseguin/git/file_converter/app.py"],
+            "python": "/Users/davidseguin/git/file_converter/.venv/bin/python"
+        },
+        {
+            "name": "test_converters",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/Users/davidseguin/git/file_converter/.venv/lib/python3.11/site-packages/streamlit",
+            "console": "integratedTerminal",
+                "cwd": "/Users/davidseguin/git/file_converter/tests",
+                "args": ["run", "/Users/davidseguin/git/file_converter/tests/test_converters.py"],
+                "python": "/Users/davidseguin/git/file_converter/.venv/bin/python"
+            }
+    ],
+
 }
